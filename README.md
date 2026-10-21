@@ -4,6 +4,14 @@ On-chain analytics built on [Dune](https://dune.com): token-holder analysis on S
 
 All of these queries are my own work.
 
+## Why I built this
+
+Blockchains are public, but wallets are anonymous. A big investor who wants to stay anonymous will not buy a coin from the wallet everyone knows is theirs. They create a fresh wallet, send it new money, and make one or a few large buys of a specific coin.
+
+That leaves a pattern that can be measured: **big buys from newly created wallets.** One such wallet means little. If a coin suddenly has a lot of them, someone may be quietly building a position, and the coin may be worth a closer look.
+
+These queries measure that. They find the wallets holding a token, filter for large holdings, and (on Base) for wallets that only recently became active. The Solana scanner counts how many wallets sit above a dollar threshold such as $1,000 or $10,000, and the price pipeline provides the price data. This is a signal, not proof: a new wallet can also just be a new user.
+
 | Project | Chain | What |
 |---|---|---|
 | [Solana holder scanner](solana-holder-scanner/) | Solana | Top holders of a token, by dollar threshold |
