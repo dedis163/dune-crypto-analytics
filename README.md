@@ -4,6 +4,8 @@ On-chain analytics built on [Dune](https://dune.com): token-holder analysis on S
 
 All of these queries are my own work.
 
+**What this repo is:** a presentation of work that was originally built as dashboards and queries on Dune. The dashboards run on Dune; this repo only shows the SQL behind them and explains what each one was for.
+
 ## Why I built this
 
 Blockchains are public, but wallets are anonymous. A big investor who wants to stay anonymous will not buy a coin from the wallet everyone knows is theirs. They create a fresh wallet, send it new money, and make one or a few large buys of a specific coin.
