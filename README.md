@@ -10,7 +10,7 @@ Blockchains are public, but wallets are anonymous. A big investor who wants to s
 
 That leaves a pattern that can be measured: **big buys from newly created wallets.** One such wallet means little. If a coin suddenly has a lot of them, someone may be quietly building a position, and the coin may be worth a closer look.
 
-These queries measure that. They find the wallets holding a token, filter for large holdings, and (on Base) for wallets that only recently became active. The Solana scanner counts how many wallets sit above a dollar threshold such as $1,000 or $10,000, and the price pipeline provides the price data. This is a signal, not proof: a new wallet can also just be a new user.
+These queries measure that. They find the wallets holding a token, filter for large holdings, and (on Base) for wallets that only recently became active. The Solana scanner lists the wallets above a dollar threshold such as $1,000 or $10,000. Each wallet links to SolFM and SolScan, where I check its history: was the wallet freshly created, or was its first transfer from a centralized exchange? The price pipeline provides the price data. This is a signal, not proof: a new wallet can also just be a new user.
 
 | Project | Chain | What |
 |---|---|---|
@@ -24,7 +24,7 @@ Original work. v4 is a fork of my own v3.
 
 **Question:** for a Solana token, how many wallets hold above a given dollar amount, and how does that change when the threshold changes?
 
-**How it was used:** the minimum holding is a parameter, so the same query was run at different dollar thresholds ($1,000 wallets, $10,000 wallets) on a coin around a $100,000 market cap, to compare how the holder picture changes.
+**How it was used:** the minimum holding is a parameter, so the same query was run at different dollar thresholds ($1,000 wallets, $10,000 wallets) on a coin around a $100,000 market cap, to compare how the holder picture changes. The scanner is the first step: it produces the list of large holders, and the SolFM and SolScan links on each row are used for the second step, checking whether each wallet is new and where its first transfer came from.
 
 **What it returns:** for any token mint address, the holders with their balance, share of supply, and USD value, filtered by the minimum holding. Each row links to SolFM and SolScan. The dashboard shows the result as a line chart and pie charts.
 
